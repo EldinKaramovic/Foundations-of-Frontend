@@ -24,6 +24,15 @@ body, html{
     min-height: 100%;
 }
 
+a:link{
+    color:pink;
+    size: 5px;
+}
+
+a:visited{
+    color:teal
+}
+
 h1, h2, h3{
     color:white;
 }
