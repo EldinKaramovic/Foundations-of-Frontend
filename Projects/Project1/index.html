@@ -26,16 +26,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">HOME</a>
+            <a class="nav-link" href="#top">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">SERVICES</a>
+            <a class="nav-link" href="#services">SERVICES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ABOUT ME</a>
+            <a class="nav-link" href="#about-me">ABOUT ME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">CONTACT</a>  
+            <a class="nav-link" href="#contact-me">CONTACT</a>  
           </li>
         </ul>
       </div>
@@ -122,10 +122,34 @@
 
 <!------FOOTER SEKCIJA-------->
 <section id="footer">
-<img src="my_wave2.png" class="footer-img"
+<img src="my_wave2.png" class="footer-img">
+<div class="container">
+<div class="row">
+<div class="col-md-4 footer-box">
+<img src="my_logo.png">
+    <p>If you need my service, feel free to contact me.</p>
+</div>
+<div class="col-md-4 footer-box">
+  <p><b>CONTACT ME</b></p>
+  <p><i class="fa fa-map-marker"></i>Bosnia and Herzegovina, 71000 Sarajevo</p>
+  <p><i class="fa fa-phone"></i>+387 62-409-716</p>
+  <p><i class="fa fa-envelope"></i>eldin.karamovic@outlook.com</p>
+</div>
+<div class="col-md-4 footer-box">
+<p><b>GET AN EMAIL WHENEVER I AM AVAILABLE</b></p>
+<input type="email" class="form-control" placeholder="Your Email">
+<button type="button" class="btn btn-primary">Get Notified</button>
+</div>
+</div>
 
 
-
+<!------Smooth scroll js-->
+<script src="smooth-scroll.js"></script>
+<script> 
+var scroll = new SmoothScroll('a[href*="#"]');
+</script>
 
 
 </section>
+</body>
+</html>
