@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Contact Form</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        .success-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="date">Preferred Contact Date:</label>
+    <input type="text" id="date" name="date" required><br><br>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea><br><br>
+    
+    <button type="submit">Submit</button>
+</form>
+
+<div class="success-message">Thank you! Your data has been saved successfully.</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/additional-methods.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Initialize date picker
+        $("#date").datepicker({
+            dateFormat: "mm/dd/yy"
+        });
+        
+        // Initialize form validation
+        $("#contactForm").validate({
+            rules: {
+                name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                date: "required",
+                message: "required"
+            },
+            messages: {
+                name: "Please enter your name",
+                email: {
+                    required: "Please enter your email",
+                    email: "Please enter a valid email address"
+                },
+                date: "Please select a preferred contact date",
+                message: "Please enter your message"
+            },
+            submitHandler: function(form) {
+                // Simulate AJAX submission with timeout
+                setTimeout(function() {
+                    // Show success message
+                    $(".success-message").show();
+                    // Clear form fields
+                    $(form).find("input[type=text], input[type=email], textarea").val("");
+                    $("#date").datepicker("setDate", null); // Clear datepicker field
+                }, 1000); // Simulate a 1 second delay
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

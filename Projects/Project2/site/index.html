@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>project2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+ 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<script type="text/javascript" src="js/include_script.js"></script>
+	<!--[if lt IE 8]><div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div><![endif]-->
+  	<!--[if lt IE 9]>
+	   	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <link href="css/ie.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+	<title>Your Web Page</title>
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+
+
+<!--success message, meal available or not-->
+	<button onclick="showSuccessMessage()">Show Success Message</button>
+    <button onclick="showErrorMessage()">Show Error Message</button>
+
+    <script>
+        function showSuccessMessage() {
+            toastr.success('We have this meal!', 'Success');
+        }
+
+        function showErrorMessage() {
+            toastr.error('Sorry, we dont have this meal!', 'Error');
+        }
+    </script>
+
+
+<div class="content">
+	<h1>Welcome to My project2</h1>
+	
+</div>
+<div class="controls">
+	<label for="theme-select">Choose theme:</label>
+	<select id="theme-select">
+		<option value="default">Default</option>
+		<option value="dark">Dark</option>
+		<option value="light">Light</option>
+	</select>
+	
+	<label for="font-size-select">Choose font size:</label>
+	<select id="font-size-select">
+		<option value="small">Small</option>
+		<option value="medium">Medium</option>
+		<option value="large">Large</option>
+	</select>
+</div>
+<script src="script.js"></script>
+<!--web site spinner-->
+	<div id="webSiteLoader"></div>
+<!--button back top-->
+	<div id="back-top"></div>
+<!--page spinner-->
+	<div id="pageLoader"><div></div></div>
+<!--background image-->
+	<img class="image_resize" src="img/bg_pic.jpg" alt="">
+<!--content wrapper-->
+	<div id="wrapper">
+<!--header-->
+		<div class="container full_height">
+			<div class="row">
+				<div class="span3">
+					<header>
+<!--logo and company name-->
+						<div class="block_1">	
+							<div class="logo">
+								<h1><a href="index.html" id="logo">Defence</a></h1>
+							</div>
+					<!--menu-->
+							<div class="menuMov">
+									<div class="menu">
+										<ul class="sf-menu">
+											<li class="bg1"><a href="index1.html"><div class="mText">Home</div></a>
+												<ul class="submenu_1">
+													<li><a href="index5.html">History</a></li>
+													<li><a href="index5.html">Staff</a></li>
+													<li><a href="index5.html">News</a>
+														<ul class="submenu_2">
+															<li><a href="index5.html">Fresh</a></li>
+															<li><a href="index5.html">Archive</a></li>
+														</ul> 
+													</li>
+												</ul>
+											</li>
+											<li class="bg2"><a href="index2.html"><div class="mText">Menu</div></a></li>
+											<li class="bg3"><a href="index3.html"><div class="mText">Blog</div></a></li>
+											<li class="bg4"><a href="index4.html"><div class="mText">Contacts</div></a></li>
+										</ul>
+									</div>
+							</div>
+						</div>
+					</header>
+				</div>
+<!--content-->	
+				<div class="span9">
+					<div class="containerHolder">
+						<section>
+							<div class="container">
+								<div class="dynamicContent">
+                       				<div class="cont_h"></div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--footer-->	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						<div class="icons">
+							<ul class="social-icon">
+								<li><a href="#"><img class="animate" src="img/icon_1.png" alt=""></a></li>
+								<li><a href="#"><img class="animate" src="img/icon_2.png" alt=""></a></li>
+								<li><a href="#"><img class="animate" src="img/icon_3.png" alt=""></a></li>
+								<li><a href="#"><img class="animate" src="img/icon_4.png" alt=""></a></li>
+							</ul>
+						</div>
+						<div class="footer_info">
+							<p>Majestic &copy; 2013 | <a class="link_1" href="index6.html">Privacy Policy</a>&nbsp;<!-- {%FOOTER_LINK} --></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>		
+	</div>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- coded by Cleric -->
+</body>
+</html>
